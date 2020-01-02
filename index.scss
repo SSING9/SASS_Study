@@ -1,0 +1,30 @@
+// 주석
+// SASS의 한 줄 주석은 CSS로 넘어가지 않음
+/* 두 줄 주석은 CSS로 넘어감 */
+
+// 변수. $로 시작 변수를 줄때 규칙은 javascript와 같음
+
+$gray:#c9c9c9;
+$white:#fff;
+$blue:blue;
+$red:red;
+$fs30:30px;
+
+.btn1 {display: block; width: 200px; height: 50px; line-height: 50px; font-size: $fs30; color: $gray; background: $white; border: 1px solid $gray; text-align: center;
+   &:hover {background: $gray; color: $white;}
+}
+.btn2 {margin-top:10px; display: block; width: 200px; height: 50px; font-size: $fs30; border: 1px solid $red; background: $blue; color: $gray; text-align: center;}
+
+// 선택자
+.selector { width: 400px;
+   ul {border: 1px solid $blue;
+      > li {background: $gray;
+         a {text-decoration: none; // 선택할때 & 사용
+            &:hover {color: $red;} 
+            &.selec2 {font-size: 30px;} // a중에 selec2 클래스가 붙은 선택자
+         }
+         .selec2 {color: $red;} // li 자식 중 selec2 클래스가 붙은 선택자
+         &:last-child {border: 3px dotted yellow;}
+      }
+   }
+}

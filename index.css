@@ -1,0 +1,17 @@
+@charset "UTF-8";
+/* 두 줄 주석은 CSS로 넘어감 */
+.btn1 { display: block; width: 200px; height: 50px; line-height: 50px; font-size: 30px; color: #c9c9c9; background: #fff; border: 1px solid #c9c9c9; text-align: center; }
+.btn1:hover { background: #c9c9c9; color: #fff; }
+
+.btn2 { margin-top: 10px; display: block; width: 200px; height: 50px; font-size: 30px; border: 1px solid red; background: blue; color: #c9c9c9; text-align: center; }
+
+.selector { width: 400px; }
+.selector ul { border: 1px solid blue; }
+.selector ul > li { background: #c9c9c9; }
+.selector ul > li a { text-decoration: none; }
+.selector ul > li a:hover { color: red; }
+.selector ul > li a.selec2 { font-size: 30px; }
+.selector ul > li .selec2 { color: red; }
+.selector ul > li:last-child { border: 3px dotted yellow; }
+
+/*# sourceMappingURL=index.css.map */
