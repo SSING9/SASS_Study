@@ -1,5 +1,7 @@
 @charset "UTF-8";
 /* 두 줄 주석은 CSS로 넘어감 */
+h2 { margin-top: 50px; color: red; }
+
 .btn1 { display: block; width: 200px; height: 50px; line-height: 50px; font-size: 30px; color: #c9c9c9; background: #fff; border: 1px solid #c9c9c9; text-align: center; }
 .btn1:hover { background: #c9c9c9; color: #fff; }
 
@@ -13,5 +15,17 @@
 .selector ul > li a.selec2 { font-size: 30px; }
 .selector ul > li .selec2 { color: red; }
 .selector ul > li:last-child { border: 3px dotted yellow; }
+
+.mixin_test { width: 100px; height: 100px; border: 1px solid red; }
+
+.mixin_test2 { display: inline-block; border: 3px solid blue; }
+.mixin_test2:after { content: ''; display: block; clear: both; }
+.mixin_test2 p { float: left; width: 100px; height: 100px; border: 1px solid red; }
+
+.mixin_test3 { width: 200px; height: 200px; border: 2px dotted red; }
+
+/* 문자보간 
+
+문자열을 넣는 방법 ${}안에 넣는다 */
 
 /*# sourceMappingURL=index.css.map */

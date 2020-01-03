@@ -1,7 +1,6 @@
 // 주석
 // SASS의 한 줄 주석은 CSS로 넘어가지 않음
 /* 두 줄 주석은 CSS로 넘어감 */
-
 // 변수. $로 시작 변수를 줄때 규칙은 javascript와 같음
 
 $gray:#c9c9c9;
@@ -9,6 +8,8 @@ $white:#fff;
 $blue:blue;
 $red:red;
 $fs30:30px;
+
+h2 {margin-top: 50px; color: $red;}
 
 .btn1 {display: block; width: 200px; height: 50px; line-height: 50px; font-size: $fs30; color: $gray; background: $white; border: 1px solid $gray; text-align: center;
    &:hover {background: $gray; color: $white;}
@@ -28,3 +29,29 @@ $fs30:30px;
       }
    }
 }
+
+// mixin
+
+@mixin test {
+   width: 100px; height: 100px; border: 1px solid $red;
+}
+@mixin clear {
+   &:after {content: ''; display: block; clear: both;}
+}
+.mixin_test {@include test();}
+
+.mixin_test2 {display: inline-block; border: 3px solid $blue; @include clear();
+   p {float: left; @include test();}
+}
+
+@mixin box($w, $h) {
+   width: $w; height: $h; border: 2px dotted $red;
+}
+
+.mixin_test3 {@include box(200px, 200px);} // 꼭 px단위도 써줘야함
+
+
+/* 문자보간 
+
+문자열을 넣는 방법 ${}안에 넣는다 */
+
