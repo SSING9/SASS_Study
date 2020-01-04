@@ -24,8 +24,30 @@ h2 { margin-top: 50px; color: red; }
 
 .mixin_test3 { width: 200px; height: 200px; border: 2px dotted red; }
 
-/* 문자보간 
+.str_test1 { border-top: 3px solid red; }
 
-문자열을 넣는 방법 ${}안에 넣는다 */
+.str_test2 { border-left: 10px solid blue; }
+
+.for_test li.list1:before { content: "제목1 "; }
+
+.for_test li.list2:before { content: "제목2 "; }
+
+.for_test li.list3:before { content: "제목3 "; }
+
+.for_test li.list4:before { content: "제목4 "; }
+
+.for_test li.list5:before { content: "제목5 "; }
+
+.ico_sun { text-indent: 30px; background: url(images/sun.png) no-repeat; }
+
+.ico_rain { text-indent: 30px; background: url(images/rain.png) no-repeat; }
+
+.ico_lightning { text-indent: 30px; background: url(images/lightning.png) no-repeat; }
+
+h3 { font-size: 30px; }
+
+h4 { font-size: 20px; }
+
+h5 { font-size: 10px; }
 
 /*# sourceMappingURL=index.css.map */

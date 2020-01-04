@@ -51,7 +51,36 @@ h2 {margin-top: 50px; color: $red;}
 .mixin_test3 {@include box(200px, 200px);} // 꼭 px단위도 써줘야함
 
 
-/* 문자보간 
+// 문자보간
+@mixin bor($position, $wit, $color) {
+   border-#{$position}: $wit solid $color;
+}
 
-문자열을 넣는 방법 ${}안에 넣는다 */
+.str_test1 {@include bor(top, 3px, $red);}
+.str_test2 {@include bor(left, 10px, $blue);}
 
+// for문
+
+@for $i from 1 to 6 {
+   .for_test{
+      li.list#{$i}:before {content: '제목#{$i} ';}
+   }
+}
+
+// each문
+
+@each $ele in sun, rain, lightning {
+   .ico_#{$ele} {text-indent: 30px; background: url(images/#{$ele}.png) no-repeat;}
+}
+
+$heading : (
+   h3:30px,
+   h4:20px,
+   h5:10px
+);
+
+@each $head, $fs in $heading {
+   #{$head} {
+      font-size: $fs;
+   }
+}
