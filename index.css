@@ -50,4 +50,17 @@ h4 { font-size: 20px; }
 
 h5 { font-size: 10px; }
 
+.content1 .conts1, .content2 .conts2, .content3 .conts3 { width: 1200px; margin: 0 auto; }
+
+.content1 { background: pink; height: 300px; }
+.content1 .conts1 { background: rgba(0, 0, 0, 0.4); height: 300px; }
+
+.content2 { background: powderblue; height: 500px; }
+.content2 .conts2 { background: rgba(0, 0, 0, 0.4); height: 500px; }
+
+.content3 { background: royalblue; height: 150px; }
+.content3 .conts3 { background: rgba(0, 0, 0, 0.4); height: 150px; }
+
+.ifelse { width: 300px; height: 300px; background: #000; position: relative; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+
 /*# sourceMappingURL=index.css.map */

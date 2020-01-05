@@ -84,3 +84,31 @@ $heading : (
       font-size: $fs;
    }
 }
+
+
+// extend
+%m0auto {width: 1200px; margin: 0 auto;}
+
+.content1 {background: pink; height: 300px;
+   .conts1 {@extend %m0auto; background: rgba(0, 0, 0, .4); height: 300px;}
+}
+.content2 {background: powderblue; height: 500px;
+   .conts2 {@extend %m0auto; background: rgba(0, 0, 0, .4); height: 500px;}
+}
+.content3 {background: royalblue; height: 150px;
+   .conts3 {@extend %m0auto; background: rgba(0, 0, 0, .4); height: 150px;}
+}
+
+// if else
+
+@mixin position($x, $y) { position: relative; top: $x; left: $y;
+   @if $x == 50% & $y == 50% {
+      transform: translate(-50%, -50%);
+   }@else if $x == 50% {
+      transform: translateX(-50%);
+   }@else if $y == 50% {
+      transform: translateY(-50%);
+   }
+}
+
+.ifelse {width: 300px; height: 300px; background: #000; @include position(null, 50%);}
